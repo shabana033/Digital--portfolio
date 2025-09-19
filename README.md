@@ -136,7 +136,7 @@
         <div class="card">
           <div class="edu-item">
             <div>
-              <div class="edu-degree">B.Sc. Computer Science</div>
+              <div class="edu-degree">Bca</div>
               <div class="meta">LNV College of arts and science, Coimbatore</div>
             </div>
             <div class="edu-meta">2024 — 2027</div>
@@ -239,7 +239,7 @@
   </main>
 
   <footer class="container">
-    © <span id="year"></span> Shrine J. All rights reserved.
+    © <span id="year"></span> shabana yasmin k. All rights reserved.
   </footer>
 
   <script>
