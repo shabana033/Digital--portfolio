@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shrine J — Professional Portfolio</title>
+  <meta name="description" content="Blue-black-green professional portfolio: About, College, Skills, Projects, Contact." />
+  <style>
+    :root {
+      --fg: #ffffff;
+      --muted: #cfd8dc;
+      --card: rgba(0,0,0,0.65);
+      --border: rgba(255,255,255,0.15);
+      --accent: #e0f2f1;
+      --shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #001f3f 0%, #000000 50%, #004d40 100%);
+      color: var(--fg);
+      font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      letter-spacing: 0.2px;
+    }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: rgba(0,0,0,0.6); border-bottom: 1px solid var(--border); z-index: 10; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; }
+    .brand { font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; }
+    .menu { display: flex; gap: 22px; }
+    .menu a { color: var(--fg); text-decoration: none; opacity: 0.9; }
+    .menu a:hover, .menu a:focus { opacity: 1; text-decoration: underline; }
+
+    .hero { padding: 72px 24px 36px; }
+    .hero-inner { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; }
+    .title { font-size: clamp(28px, 4vw, 42px); margin: 0 0 8px; }
+    .subtitle { color: var(--muted); margin: 0 0 18px; font-size: 16px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { appearance: none; border: 1px solid var(--border); background: var(--card); color: var(--fg); padding: 10px 14px; border-radius: 12px; box-shadow: var(--shadow); cursor: pointer; text-decoration: none; }
+    .btn:hover { transform: translateY(-1px); }
+
+    section { padding: 36px 24px; }
+    h2 { font-size: 20px; letter-spacing: 0.4px; text-transform: uppercase; margin: 0 0 16px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 12; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); }
+
+    .about p { color: var(--accent); margin: 0; }
+
+    .edu-item { display: flex; justify-content: space-between; gap: 12px; border-top: 1px dashed var(--border); padding: 12px 0; }
+    .edu-item:first-child { border-top: none; padding-top: 0; }
+    .edu-degree { font-weight: 600; }
+    .edu-meta { color: var(--muted); white-space: nowrap; }
+
+    .skills { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .skills-col { grid-column: span 12; }
+    .skills-col h3 { margin: 0 0 10px; font-size: 16px; text-transform: uppercase; color: var(--accent); }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag { border: 1px solid var(--border); background: rgba(0,0,0,0.5); padding: 7px 10px; border-radius: 999px; font-size: 13px; }
+
+    .projects { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .project { grid-column: span 12; background: rgba(0,0,0,0.5); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+    .project-inner { display: grid; grid-template-columns: 1fr; }
+    .project-body { padding: 16px; }
+    .project h3 { margin: 0 0 6px; font-size: 18px; }
+    .project p { margin: 0 0 10px; color: var(--accent); }
+    .meta { color: var(--muted); font-size: 13px; }
+    .links { margin-top: 8px; display: flex; gap: 12px; }
+    .links a { color: var(--fg); opacity: 0.9; }
+    .links a:hover { opacity: 1; text-decoration: underline; }
+
+    footer { padding: 36px 24px 60px; color: var(--muted); border-top: 1px solid var(--border); }
+
+    @media (min-width: 800px) {
+      .card.span-6 { grid-column: span 6; }
+      .skills-col { grid-column: span 6; }
+      .project-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      header { position: static; background: #fff; }
+      .btn { display: none; }
+      .card, .project { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <div class="brand">Shrine J</div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#education">College</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="intro-heading">
+      <div class="hero-inner">
+        <div>
+          <h1 id="intro-heading" class="title">Shrine J</h1>
+          <p class="subtitle">Aspiring Software Developer • Clean, minimal, professional portfolio (Blue‑Black‑Green)</p>
+          <div class="actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+            <a class="btn" href="resume.pdf" download>Download Résumé (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="grid about">
+        <article class="card">
+          <p>
+            I’m a motivated student passionate about building useful products with clean code and simple UX.
+            I enjoy backend development (without Node.js), databases, and automations. Looking for internship
+            opportunities to learn and contribute.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" aria-labelledby="edu-heading">
+      <h2 id="edu-heading">College / Education</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="edu-item">
+            <div>
+              <div class="edu-degree">B.Sc. Computer Science</div>
+              <div class="meta">LNV College of arts and science, Coimbatore</div>
+            </div>
+            <div class="edu-meta">2024 — 2027</div>
+          </div>
+          <div class="edu-item">
+            <div>
+              <div class="edu-degree">HSC</div>
+              <div class="meta">Your School Name</div>
+            </div>
+            <div class="edu-meta">2021 — 2023</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills">
+        <div class="card skills-col">
+          <h3>Hard Skills</h3>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django / Flask</span>
+            <span class="tag">MySQL / PostgreSQL</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">HTML • CSS</span>
+          </div>
+        </div>
+        <div class="card skills-col">
+          <h3>Soft Skills</h3>
+          <div class="tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="project-inner">
+            <div class="project-body">
+              <h3>Project One — BMI Calculator (Web)</h3>
+              <p>Simple, responsive BMI calculator with clean UI and form validation. Built for an academic mini‑project.</p>
+              <div class="meta">Tech: HTML, CSS, JavaScript</div>
+              <div class="links">
+                <a href="#">Live Demo</a>
+                <a href="#">Source Code</a>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Project Two — Diet Planner (Backend)</h3>
+              <p>API that suggests diet plans by BMI category with CRUD for foods and plans.</p>
+              <div class="meta">Tech: Python, Flask, SQLite</div>
+              <div class="links">
+                <a href="#">API Docs</a>
+                <a href="#">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="grid">
+        <div class="card span-6">
+          <form action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your Name" required style="width:100%;margin:6px 0 14px;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0b0b;color:var(--fg);" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;margin:6px 0 14px;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0b0b;color:var(--fg);" />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Say hello…" required style="width:100%;margin:6px 0 14px;padding:10px;border-radius:10px;border:1px solid var(--border);background:#0b0b0b;color:var(--fg);"></textarea>
+
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="card span-6">
+          <div class="meta">Social</div>
+          <p style="margin:8px 0 0;">
+            <a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#">Twitter</a>
+          </p>
+          <div class="meta" style="margin-top:16px;">Phone</div>
+          <p style="margin:8px 0 0;">+91-XXXXXXXXXX</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    © <span id="year"></span> Shrine J. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
