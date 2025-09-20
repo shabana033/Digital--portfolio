@@ -104,7 +104,7 @@
     <section class="hero" aria-labelledby="intro-heading">
       <div class="hero-inner">
         <div>
-          <h1 id="intro-heading" class="title">Shrine J</h1>
+          <h1 id="intro-heading" class="title">Shabana yasmin k</h1>
           <p class="subtitle">Aspiring Software Developer • Clean, minimal, professional portfolio (Blue‑Black‑Green)</p>
           <div class="actions">
             <a class="btn" href="#projects">View Projects</a>
