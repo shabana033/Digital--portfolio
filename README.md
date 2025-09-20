@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shrine J — Professional Portfolio</title>
+  <title>Shabana Yasmin k— Professional Portfolio</title>
   <meta name="description" content="Blue-black-green professional portfolio: About, College, Skills, Projects, Contact." />
   <style>
     :root {
